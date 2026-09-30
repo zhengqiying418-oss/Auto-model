@@ -1,0 +1,417 @@
+{
+    "node_9acc12af-1bb1-488e-be8f-9f9f38498def": {
+        "id": "node_9acc12af-1bb1-488e-be8f-9f9f38498def",
+        "module": "startEvent",
+        "name": "",
+        "currency": "",
+        "targetRef": [
+            "node_8dce0d96-2fab-45fe-a0c5-55f06afed166"
+        ],
+        "sourceRef": "",
+        "gatewayDirection": ""
+    },
+    "node_e7e8dc91-8a21-47dc-9967-f92a072e94ec": {
+        "id": "node_e7e8dc91-8a21-47dc-9967-f92a072e94ec",
+        "module": "endEvent",
+        "name": "",
+        "currency": "",
+        "targetRef": [],
+        "sourceRef": "node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb",
+        "gatewayDirection": ""
+    },
+    "node_8dce0d96-2fab-45fe-a0c5-55f06afed166": {
+        "id": "node_8dce0d96-2fab-45fe-a0c5-55f06afed166",
+        "module": "task",
+        "name": "Create Purchase Requisition",
+        "currency": "",
+        "targetRef": [
+            "node_c1f92edb-9498-4a61-8713-bd1725ecf079"
+        ],
+        "sourceRef": "node_9acc12af-1bb1-488e-be8f-9f9f38498def",
+        "gatewayDirection": "",
+        "Expression": "POIS(1843)",
+        "Resource_Set": "Kim Passa,Esmana Liubiata,Tesca Lobes,Fjodor Kowalski,Christian Francois,Anne Olwada,Alberto Duport,Penn Osterwalder,Immanuel Karagianni,Clement Duchot,Elvira Lores,Nico Ojenbeer,Anna Kaufmann,Miu Hanwan",
+        "Resource_Number": 14,
+        "Resource_Requirement": 1
+    },
+    "node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd": {
+        "id": "node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd",
+        "module": "task",
+        "name": "Approve Purchase Order for payment",
+        "currency": "",
+        "targetRef": [
+            "node_6cc030c7-4d4f-4bc0-b879-27b161df4c18"
+        ],
+        "sourceRef": "node_04b4d711-f5c4-485f-8dad-98a7742513d5",
+        "gatewayDirection": "",
+        "Expression": "60",
+        "Resource_Set": "Karel de Groot,Magdalena Predutta,Francois de Perrier",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_84842fb8-e987-43d4-b1ba-a91ff7d603c9": {
+        "id": "node_84842fb8-e987-43d4-b1ba-a91ff7d603c9",
+        "module": "task",
+        "name": "Settle Conditions With Supplier",
+        "currency": "",
+        "targetRef": [
+            "node_cd036493-beac-4199-acb3-89c10e69e483"
+        ],
+        "sourceRef": "node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c",
+        "gatewayDirection": "",
+        "Expression": "POIS(32389)",
+        "Resource_Set": "Francois de Perrier,Karel de Groot,Magdalena Predutta",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f": {
+        "id": "node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f",
+        "module": "task",
+        "name": "Amend Purchase Requisition",
+        "currency": "",
+        "targetRef": [
+            "node_c1f92edb-9498-4a61-8713-bd1725ecf079"
+        ],
+        "sourceRef": "node_da456938-4f3a-42ee-a755-e5d52ca57aba",
+        "gatewayDirection": "",
+        "Expression": "POIS(1642)",
+        "Resource_Set": "Kim Passa,Penn Osterwalder,Christian Francois,Nico Ojenbeer,Miu Hanwan,Elvira Lores,Immanuel Karagianni,Clement Duchot",
+        "Resource_Number": 8,
+        "Resource_Requirement": 1
+    },
+    "node_d431053d-49c1-47ea-8ad0-607b7fed7b03": {
+        "id": "node_d431053d-49c1-47ea-8ad0-607b7fed7b03",
+        "module": "task",
+        "name": "Create Request for Quotation",
+        "currency": "",
+        "targetRef": [
+            "node_2fb76c53-da6c-4611-94de-0a29b2416dca"
+        ],
+        "sourceRef": "node_da456938-4f3a-42ee-a755-e5d52ca57aba",
+        "gatewayDirection": "",
+        "Expression": "UNIF(60,960)",
+        "Resource_Set": "Kim Passa,Immanuel Karagianni,Clement Duchot,Heinz Gutschmidt,Miu Hanwan,Nico Ojenbeer,Maris Freeman,Anna Kaufmann,Tesca Lobes,Francis Odell,Penn Osterwalder,Fjodor Kowalski,Anne Olwada,Esmana Liubiata,Christian Francois,Alberto Duport,Elvira Lores",
+        "Resource_Number": 17,
+        "Resource_Requirement": 1
+    },
+    "node_6cc030c7-4d4f-4bc0-b879-27b161df4c18": {
+        "id": "node_6cc030c7-4d4f-4bc0-b879-27b161df4c18",
+        "module": "task",
+        "name": "Send Invoice",
+        "currency": "",
+        "targetRef": [
+            "node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68"
+        ],
+        "sourceRef": "node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd",
+        "gatewayDirection": "",
+        "Expression": "0",
+        "Resource_Set": "Kiu Kan,Karen Clarens,Esmeralda Clay,Sean Manney,Carmen Finacse",
+        "Resource_Number": 5,
+        "Resource_Requirement": 1
+    },
+    "node_c1f92edb-9498-4a61-8713-bd1725ecf079": {
+        "id": "node_c1f92edb-9498-4a61-8713-bd1725ecf079",
+        "module": "task",
+        "name": "Analyze Purchase Requisition",
+        "currency": "",
+        "targetRef": [
+            "node_da456938-4f3a-42ee-a755-e5d52ca57aba"
+        ],
+        "sourceRef": [
+            "node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f",
+            "node_8dce0d96-2fab-45fe-a0c5-55f06afed166"
+        ],
+        "gatewayDirection": "",
+        "Expression": "UNIF(240,7500)",
+        "Resource_Set": "Heinz Gutschmidt,Maris Freeman,Francis Odell",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_2fb76c53-da6c-4611-94de-0a29b2416dca": {
+        "id": "node_2fb76c53-da6c-4611-94de-0a29b2416dca",
+        "module": "task",
+        "name": "Analyze Request for Quotation",
+        "currency": "",
+        "targetRef": [
+            "node_0155a900-fd46-4b18-8cd7-0604d67505c3"
+        ],
+        "sourceRef": [
+            "node_d6391ca4-de4e-4997-b51b-b7d5b95a6558",
+            "node_d431053d-49c1-47ea-8ad0-607b7fed7b03"
+        ],
+        "gatewayDirection": "",
+        "Expression": "POIS(1382)",
+        "Resource_Set": "Karel de Groot,Francois de Perrier,Magdalena Predutta",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_d6391ca4-de4e-4997-b51b-b7d5b95a6558": {
+        "id": "node_d6391ca4-de4e-4997-b51b-b7d5b95a6558",
+        "module": "task",
+        "name": "Amend Request for Quotation",
+        "currency": "",
+        "targetRef": [
+            "node_2fb76c53-da6c-4611-94de-0a29b2416dca"
+        ],
+        "sourceRef": "node_0155a900-fd46-4b18-8cd7-0604d67505c3",
+        "gatewayDirection": "",
+        "Expression": "UNIF(300,1620)",
+        "Resource_Set": "Kim Passa,Heinz Gutschmidt,Anne Olwada,Immanuel Karagianni,Clement Duchot,Nico Ojenbeer,Fjodor Kowalski,Esmana Liubiata,Christian Francois,Miu Hanwan,Maris Freeman,Anna Kaufmann,Elvira Lores,Tesca Lobes,Penn Osterwalder,Alberto Duport,Francis Odell",
+        "Resource_Number": 17,
+        "Resource_Requirement": 1
+    },
+    "node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb": {
+        "id": "node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb",
+        "module": "task",
+        "name": "Pay Invoice",
+        "currency": "",
+        "targetRef": [
+            "node_e7e8dc91-8a21-47dc-9967-f92a072e94ec"
+        ],
+        "sourceRef": "node_5423b619-3b4e-4d65-a435-575ff1e46856",
+        "gatewayDirection": "",
+        "Expression": "POIS(562)",
+        "Resource_Set": "Pedro Alvares,Karalda Nimwada",
+        "Resource_Number": 2,
+        "Resource_Requirement": 1
+    },
+    "node_ae1d5b94-8d30-47ab-b05b-2dda4117573d": {
+        "id": "node_ae1d5b94-8d30-47ab-b05b-2dda4117573d",
+        "module": "task",
+        "name": "Analyze Quotation Comparison Map",
+        "currency": "",
+        "targetRef": [
+            "node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c"
+        ],
+        "sourceRef": "node_e066d58b-4522-4953-96a9-c37c6d36e509",
+        "gatewayDirection": "",
+        "Expression": "POIS(1209)",
+        "Resource_Set": "Immanuel Karagianni,Anna Kaufmann,Fjodor Kowalski,Penn Osterwalder,Miu Hanwan,Clement Duchot,Christian Francois,Nico Ojenbeer,Esmana Liubiata,Anne Olwada,Tesca Lobes,Alberto Duport,Elvira Lores,Kim Passa",
+        "Resource_Number": 14,
+        "Resource_Requirement": 1
+    },
+    "node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68": {
+        "id": "node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68",
+        "module": "task",
+        "name": "Release Supplier's Invoice",
+        "currency": "",
+        "targetRef": [
+            "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9"
+        ],
+        "sourceRef": "node_6cc030c7-4d4f-4bc0-b879-27b161df4c18",
+        "gatewayDirection": "",
+        "Expression": "POIS(269)",
+        "Resource_Set": "Karalda Nimwada,Pedro Alvares",
+        "Resource_Number": 2,
+        "Resource_Requirement": 1
+    },
+    "node_5423b619-3b4e-4d65-a435-575ff1e46856": {
+        "id": "node_5423b619-3b4e-4d65-a435-575ff1e46856",
+        "module": "task",
+        "name": "Authorize Supplier's Invoice payment",
+        "currency": "",
+        "targetRef": [
+            "node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb"
+        ],
+        "sourceRef": [
+            "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9",
+            "node_5d95c672-738c-4946-a948-f369568cb744"
+        ],
+        "gatewayDirection": "",
+        "Expression": "0",
+        "Resource_Set": "Karalda Nimwada,Pedro Alvares",
+        "Resource_Number": 2,
+        "Resource_Requirement": 1
+    },
+    "node_cd036493-beac-4199-acb3-89c10e69e483": {
+        "id": "node_cd036493-beac-4199-acb3-89c10e69e483",
+        "module": "task",
+        "name": "Create Purchase Order",
+        "currency": "",
+        "targetRef": [
+            "node_3abd0a91-8811-4096-aefc-b55500d68de4"
+        ],
+        "sourceRef": "node_84842fb8-e987-43d4-b1ba-a91ff7d603c9",
+        "gatewayDirection": "",
+        "Expression": "POIS(573)",
+        "Resource_Set": "Karel de Groot,Magdalena Predutta,Francois de Perrier",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222": {
+        "id": "node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222",
+        "module": "task",
+        "name": "Deliver Goods Services",
+        "currency": "",
+        "targetRef": [
+            "node_04b4d711-f5c4-485f-8dad-98a7742513d5"
+        ],
+        "sourceRef": "node_3abd0a91-8811-4096-aefc-b55500d68de4",
+        "gatewayDirection": "",
+        "Expression": "POIS(91075)",
+        "Resource_Set": "Sean Manney,Kiu Kan,Carmen Finacse,Karen Clarens,Esmeralda Clay",
+        "Resource_Number": 5,
+        "Resource_Requirement": 1
+    },
+    "node_5d95c672-738c-4946-a948-f369568cb744": {
+        "id": "node_5d95c672-738c-4946-a948-f369568cb744",
+        "module": "task",
+        "name": "Settle Dispute With Supplier",
+        "currency": "",
+        "targetRef": [
+            "node_5423b619-3b4e-4d65-a435-575ff1e46856"
+        ],
+        "sourceRef": "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9",
+        "gatewayDirection": "",
+        "Expression": "UNIF(780,37200)",
+        "Resource_Set": "Karalda Nimwada,Pedro Alvares,Magdalena Predutta,Karel de Groot,Francois de Perrier",
+        "Resource_Number": 5,
+        "Resource_Requirement": 1
+    },
+    "node_04b4d711-f5c4-485f-8dad-98a7742513d5": {
+        "id": "node_04b4d711-f5c4-485f-8dad-98a7742513d5",
+        "module": "task",
+        "name": "Release Purchase Order",
+        "currency": "",
+        "targetRef": [
+            "node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd"
+        ],
+        "sourceRef": "node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222",
+        "gatewayDirection": "",
+        "Expression": "60",
+        "Resource_Set": "Elvira Lores,Tesca Lobes,Nico Ojenbeer,Anne Olwada,Kim Passa,Miu Hanwan,Penn Osterwalder,Christian Francois,Alberto Duport,Clement Duchot,Immanuel Karagianni,Fjodor Kowalski,Esmana Liubiata,Anna Kaufmann",
+        "Resource_Number": 14,
+        "Resource_Requirement": 1
+    },
+    "node_3abd0a91-8811-4096-aefc-b55500d68de4": {
+        "id": "node_3abd0a91-8811-4096-aefc-b55500d68de4",
+        "module": "task",
+        "name": "Confirm Purchase Order",
+        "currency": "",
+        "targetRef": [
+            "node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222"
+        ],
+        "sourceRef": "node_cd036493-beac-4199-acb3-89c10e69e483",
+        "gatewayDirection": "",
+        "Expression": "UNIF(240,9240)",
+        "Resource_Set": "Sean Manney,Carmen Finacse,Kiu Kan,Karen Clarens,Esmeralda Clay",
+        "Resource_Number": 5,
+        "Resource_Requirement": 1
+    },
+    "node_e066d58b-4522-4953-96a9-c37c6d36e509": {
+        "id": "node_e066d58b-4522-4953-96a9-c37c6d36e509",
+        "module": "task",
+        "name": "Create Quotation comparison Map",
+        "currency": "",
+        "targetRef": [
+            "node_ae1d5b94-8d30-47ab-b05b-2dda4117573d"
+        ],
+        "sourceRef": "node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb",
+        "gatewayDirection": "",
+        "Expression": "POIS(12155)",
+        "Resource_Set": "Magdalena Predutta,Karel de Groot,Francois de Perrier",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb": {
+        "id": "node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb",
+        "module": "task",
+        "name": "Send Request for Quotation to Supplier",
+        "currency": "",
+        "targetRef": [
+            "node_e066d58b-4522-4953-96a9-c37c6d36e509"
+        ],
+        "sourceRef": "node_0155a900-fd46-4b18-8cd7-0604d67505c3",
+        "gatewayDirection": "",
+        "Expression": "UNIF(60,8880)",
+        "Resource_Set": "Karel de Groot,Magdalena Predutta,Francois de Perrier",
+        "Resource_Number": 3,
+        "Resource_Requirement": 1
+    },
+    "node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c": {
+        "id": "node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c",
+        "module": "task",
+        "name": "Choose best option",
+        "currency": "",
+        "targetRef": [
+            "node_84842fb8-e987-43d4-b1ba-a91ff7d603c9"
+        ],
+        "sourceRef": "node_ae1d5b94-8d30-47ab-b05b-2dda4117573d",
+        "gatewayDirection": "",
+        "Expression": "0",
+        "Resource_Set": "Tesca Lobes,Nico Ojenbeer,Esmana Liubiata,Alberto Duport,Christian Francois,Anne Olwada,Penn Osterwalder,Elvira Lores,Clement Duchot,Miu Hanwan,Kim Passa,Fjodor Kowalski,Immanuel Karagianni,Anna Kaufmann",
+        "Resource_Number": 14,
+        "Resource_Requirement": 1
+    },
+    "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9": {
+        "id": "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9",
+        "module": "decide",
+        "name": "",
+        "currency": "",
+        "targetRef": [
+            "node_5d95c672-738c-4946-a948-f369568cb744",
+            "node_5423b619-3b4e-4d65-a435-575ff1e46856"
+        ],
+        "sourceRef": "node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68",
+        "gatewayDirection": "Diverging",
+        "Gateway_Type": "XOR",
+        "Gateway_ID": "node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9",
+        "Branch_Mapping": {
+            "node_5d95c672-738c-4946-a948-f369568cb744": "Settle Dispute With Supplier",
+            "node_5423b619-3b4e-4d65-a435-575ff1e46856": "Authorize Supplier's Invoice payment"
+        },
+        "Probability": {
+            "Settle Dispute With Supplier": 0.1985,
+            "Authorize Supplier's Invoice payment": 0.8015
+        }
+    },
+    "node_0155a900-fd46-4b18-8cd7-0604d67505c3": {
+        "id": "node_0155a900-fd46-4b18-8cd7-0604d67505c3",
+        "module": "decide",
+        "name": "",
+        "currency": "",
+        "targetRef": [
+            "node_d6391ca4-de4e-4997-b51b-b7d5b95a6558",
+            "node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb"
+        ],
+        "sourceRef": "node_2fb76c53-da6c-4611-94de-0a29b2416dca",
+        "gatewayDirection": "Diverging",
+        "Gateway_Type": "XOR",
+        "Gateway_ID": "node_0155a900-fd46-4b18-8cd7-0604d67505c3",
+        "Branch_Mapping": {
+            "node_d6391ca4-de4e-4997-b51b-b7d5b95a6558": "Amend Request for Quotation",
+            "node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb": "Send Request for Quotation to Supplier"
+        },
+        "Probability": {
+            "Amend Request for Quotation": 0.514,
+            "Send Request for Quotation to Supplier": 0.486
+        }
+    },
+    "node_da456938-4f3a-42ee-a755-e5d52ca57aba": {
+        "id": "node_da456938-4f3a-42ee-a755-e5d52ca57aba",
+        "module": "decide",
+        "name": "",
+        "currency": "",
+        "targetRef": [
+            "node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f",
+            "node_d431053d-49c1-47ea-8ad0-607b7fed7b03"
+        ],
+        "sourceRef": "node_c1f92edb-9498-4a61-8713-bd1725ecf079",
+        "gatewayDirection": "Diverging",
+        "Gateway_Type": "XOR",
+        "Gateway_ID": "node_da456938-4f3a-42ee-a755-e5d52ca57aba",
+        "Branch_Mapping": {
+            "node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f": "Amend Purchase Requisition",
+            "node_d431053d-49c1-47ea-8ad0-607b7fed7b03": "Create Request for Quotation"
+        },
+        "Probability": {
+            "Amend Purchase Requisition": 0.0354,
+            "Create Request for Quotation": 0.9646
+        }
+    },
+    "Process_Parameter": {
+        "Arrival": {
+            "Case Arrival Rate": "EXPO(40605)"
+        }
+    }
+}

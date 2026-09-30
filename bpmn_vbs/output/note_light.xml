@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<ns0:definitions xmlns:ns0="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.omg.org/bpmn20" exporter="ProM. http://www.promtools.org/prom6" exporterVersion="6.3" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+  <startEvent id="node_9acc12af-1bb1-488e-be8f-9f9f38498def" name="" targetRef="node_8dce0d96-2fab-45fe-a0c5-55f06afed166"/>
+  <endEvent id="node_e7e8dc91-8a21-47dc-9967-f92a072e94ec" name="" sourceRef="node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb"/>
+  <task id="node_8dce0d96-2fab-45fe-a0c5-55f06afed166" name="Create Purchase Requisition" sourceRef="node_9acc12af-1bb1-488e-be8f-9f9f38498def" targetRef="node_d281728e-18d3-4a0b-b4d2-4d5b8798d768">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd" name="Approve Purchase Order for payment" sourceRef="node_04b4d711-f5c4-485f-8dad-98a7742513d5" targetRef="node_6cc030c7-4d4f-4bc0-b879-27b161df4c18">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_84842fb8-e987-43d4-b1ba-a91ff7d603c9" name="Settle Conditions With Supplier" targetRef="node_cd036493-beac-4199-acb3-89c10e69e483" sourceRef="node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f" name="Amend Purchase Requisition" sourceRef="node_da456938-4f3a-42ee-a755-e5d52ca57aba" targetRef="node_d281728e-18d3-4a0b-b4d2-4d5b8798d768">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_d431053d-49c1-47ea-8ad0-607b7fed7b03" name="Create Request for Quotation" sourceRef="node_da456938-4f3a-42ee-a755-e5d52ca57aba" targetRef="node_104148d4-40b3-45ab-9eee-9c6c8654f720">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_6cc030c7-4d4f-4bc0-b879-27b161df4c18" name="Send Invoice" targetRef="node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68" sourceRef="node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_c1f92edb-9498-4a61-8713-bd1725ecf079" name="Analyze Purchase Requisition" targetRef="node_da456938-4f3a-42ee-a755-e5d52ca57aba" sourceRef="node_d281728e-18d3-4a0b-b4d2-4d5b8798d768">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_2fb76c53-da6c-4611-94de-0a29b2416dca" name="Analyze Request for Quotation" targetRef="node_0155a900-fd46-4b18-8cd7-0604d67505c3" sourceRef="node_104148d4-40b3-45ab-9eee-9c6c8654f720">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_d6391ca4-de4e-4997-b51b-b7d5b95a6558" name="Amend Request for Quotation" sourceRef="node_0155a900-fd46-4b18-8cd7-0604d67505c3" targetRef="node_104148d4-40b3-45ab-9eee-9c6c8654f720">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb" name="Pay Invoice" sourceRef="node_5423b619-3b4e-4d65-a435-575ff1e46856" targetRef="node_e7e8dc91-8a21-47dc-9967-f92a072e94ec">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_ae1d5b94-8d30-47ab-b05b-2dda4117573d" name="Analyze Quotation Comparison Map" targetRef="node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c" sourceRef="node_e066d58b-4522-4953-96a9-c37c6d36e509">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68" name="Release Supplier's Invoice" sourceRef="node_6cc030c7-4d4f-4bc0-b879-27b161df4c18" targetRef="node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_5423b619-3b4e-4d65-a435-575ff1e46856" name="Authorize Supplier's Invoice payment" targetRef="node_fe34442d-b6f1-45db-815f-1f2a84a4a2fb" sourceRef="node_09b72831-2e38-4378-8bc0-1d8aa59ad4a6">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_cd036493-beac-4199-acb3-89c10e69e483" name="Create Purchase Order" targetRef="node_3abd0a91-8811-4096-aefc-b55500d68de4" sourceRef="node_84842fb8-e987-43d4-b1ba-a91ff7d603c9">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222" name="Deliver Goods Services" sourceRef="node_3abd0a91-8811-4096-aefc-b55500d68de4" targetRef="node_04b4d711-f5c4-485f-8dad-98a7742513d5">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_5d95c672-738c-4946-a948-f369568cb744" name="Settle Dispute With Supplier" sourceRef="node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9" targetRef="node_09b72831-2e38-4378-8bc0-1d8aa59ad4a6">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_04b4d711-f5c4-485f-8dad-98a7742513d5" name="Release Purchase Order" targetRef="node_a5a6ee1f-e281-40b2-87b9-091e7985b5fd" sourceRef="node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_3abd0a91-8811-4096-aefc-b55500d68de4" name="Confirm Purchase Order" targetRef="node_59ddbb0c-f42c-4b13-88ce-b466e9c9c222" sourceRef="node_cd036493-beac-4199-acb3-89c10e69e483">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_e066d58b-4522-4953-96a9-c37c6d36e509" name="Create Quotation comparison Map" sourceRef="node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb" targetRef="node_ae1d5b94-8d30-47ab-b05b-2dda4117573d">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb" name="Send Request for Quotation to Supplier" targetRef="node_e066d58b-4522-4953-96a9-c37c6d36e509" sourceRef="node_0155a900-fd46-4b18-8cd7-0604d67505c3">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <task id="node_6bf3428c-74a2-4b34-812f-5f1eaae6e01c" name="Choose best option" sourceRef="node_ae1d5b94-8d30-47ab-b05b-2dda4117573d" targetRef="node_84842fb8-e987-43d4-b1ba-a91ff7d603c9">
+    <ns0:standardLoopCharacteristics testBefore="false"/>
+  </task>
+  <exclusiveGateway id="node_09b72831-2e38-4378-8bc0-1d8aa59ad4a6" name="" gatewayDirection="Converging" targetRef="node_5423b619-3b4e-4d65-a435-575ff1e46856" sourceRef="node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9,node_5d95c672-738c-4946-a948-f369568cb744">
+    <ns0:incoming>
+node_38e546e3-4c95-4527-bd85-ec119587ece7</ns0:incoming>
+    <ns0:incoming>
+node_e0d72853-328c-4962-864a-902d62b95b5d</ns0:incoming>
+    <ns0:outgoing>
+node_6391aae5-c63b-48fe-b0a8-3ac40eae44b1</ns0:outgoing>
+  </exclusiveGateway>
+  <exclusiveGateway id="node_b41a98ce-a48c-4369-880c-ffeb5ff98ee9" name="" gatewayDirection="Diverging" sourceRef="node_8e75ccbc-9014-4e4a-871c-14e5fcad7f68" targetRef="node_5d95c672-738c-4946-a948-f369568cb744,node_09b72831-2e38-4378-8bc0-1d8aa59ad4a6">
+    <ns0:incoming>
+node_1093206f-c223-44e9-b8ab-56218a29e857</ns0:incoming>
+    <ns0:outgoing>
+node_fb4fe9be-333e-4afd-a854-b51972b14e7a</ns0:outgoing>
+    <ns0:outgoing>
+node_e0d72853-328c-4962-864a-902d62b95b5d</ns0:outgoing>
+  </exclusiveGateway>
+  <exclusiveGateway id="node_d281728e-18d3-4a0b-b4d2-4d5b8798d768" name="" gatewayDirection="Converging" targetRef="node_c1f92edb-9498-4a61-8713-bd1725ecf079" sourceRef="node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f,node_8dce0d96-2fab-45fe-a0c5-55f06afed166">
+    <ns0:incoming>
+node_31757462-2407-4c5d-a5e3-ba247abad33b</ns0:incoming>
+    <ns0:incoming>
+node_c4d89db7-913f-4749-a0e1-2a84a98ffc2e</ns0:incoming>
+    <ns0:outgoing>
+node_2c827609-dc11-4e5d-acce-337c2cd9af30</ns0:outgoing>
+  </exclusiveGateway>
+  <exclusiveGateway id="node_0155a900-fd46-4b18-8cd7-0604d67505c3" name="" gatewayDirection="Diverging" sourceRef="node_2fb76c53-da6c-4611-94de-0a29b2416dca" targetRef="node_d6391ca4-de4e-4997-b51b-b7d5b95a6558,node_0a3dcbef-fa47-4e63-b98e-8adf4bc32bcb">
+    <ns0:incoming>
+node_bc3591e3-1eef-4238-894a-cae4603152f0</ns0:incoming>
+    <ns0:outgoing>
+node_0d1377a0-a84d-4c7c-bf3c-32d35c69bd5b</ns0:outgoing>
+    <ns0:outgoing>
+node_d43971a9-2579-44f9-a760-f8097c351686</ns0:outgoing>
+  </exclusiveGateway>
+  <exclusiveGateway id="node_104148d4-40b3-45ab-9eee-9c6c8654f720" name="" gatewayDirection="Converging" targetRef="node_2fb76c53-da6c-4611-94de-0a29b2416dca" sourceRef="node_d6391ca4-de4e-4997-b51b-b7d5b95a6558,node_d431053d-49c1-47ea-8ad0-607b7fed7b03">
+    <ns0:incoming>
+node_1f9a754d-7daf-4235-b667-012ffc4b6bd0</ns0:incoming>
+    <ns0:incoming>
+node_fde515dc-98b2-48f6-b181-fcbf6ce04cc1</ns0:incoming>
+    <ns0:outgoing>
+node_0b352ce9-3a43-4f91-a413-d8e7d98021ca</ns0:outgoing>
+  </exclusiveGateway>
+  <exclusiveGateway id="node_da456938-4f3a-42ee-a755-e5d52ca57aba" name="" gatewayDirection="Diverging" sourceRef="node_c1f92edb-9498-4a61-8713-bd1725ecf079" targetRef="node_d38ca4df-b957-4d10-a6e7-e48f23e73d0f,node_d431053d-49c1-47ea-8ad0-607b7fed7b03">
+    <ns0:incoming>
+node_7052d63c-39dc-4020-96c7-31335282f6da</ns0:incoming>
+    <ns0:outgoing>
+node_b8fa867c-99ef-4acb-96ad-eb9b8bcfd0f0</ns0:outgoing>
+    <ns0:outgoing>
+node_cfea297b-0995-4a55-a517-847c0488b6c2</ns0:outgoing>
+  </exclusiveGateway>
+</ns0:definitions>
